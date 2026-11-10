@@ -1,0 +1,11 @@
+# The Sovereign Illusion: AI, Geopolitics, and Power in an Interdependent World
+> Author: Victor Brooks | Publisher: Digbijoy Labs (2026)
+> Amazon Kindle ($2.99): https://www.amazon.com/dp/B0HMS4JJ1R
+> Amazon Paperback ($14.99): https://www.amazon.com/dp/B0HMX59GSQ
+> Amazon Hardcover ($22.99): https://www.amazon.com/dp/B0HMZRG96T
+> Companion Repository: https://github.com/digbijoy-labs/the-sovereign-illusion
+
+## Summary
+The Sovereign Illusion is a 14-chapter trade non-fiction investigation into the physical, geological, electrical-grid, semiconductor, and geopolitical realities of artificial intelligence. It demonstrates why complete national AI autarky ("Sovereign AI") is physically impossible across Spruce Pine high-purity quartz, multi-gigawatt baseload power, US/UK EDA software, Dutch-German EUV photolithography (ASML/Zeiss/Trumpf), Japanese fluorinated photoresists, Taiwanese sub-5nm fabrication and CoWoS packaging (TSMC), and South Korean HBM3e memory (SK Hynix/Samsung).
+
+It introduces the Four Sovereignty Invariants (Interruption Authority, Autonomous Runway, Switching Friction, Governance Jurisdiction) and provides actionable playbooks for open-weight model leverage, Digital Public Infrastructure (DPI), Data Embassies, and collective procurement.

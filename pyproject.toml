@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "the-sovereign-illusion"
+version = "1.1.0"
+description = "2026 Global AI Supply-Chain Chokepoint Dataset, Interactive Simulator & Sovereignty MCP Auditor (Companion to The Sovereign Illusion by Victor Brooks)"
+authors = [
+    { name = "Victor Brooks", email = "contact@digbijoylabs.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = [
+    "ai-geopolitics",
+    "sovereign-ai",
+    "semiconductor-supply-chain",
+    "asml-euv",
+    "tsmc-cowos",
+    "mcp-server",
+    "ai-governance",
+    "supply-chain-risk"
+]
+
+[project.scripts]
+sovereign-ai-audit = "audit.sovereignty_dependency_audit:main"
+sovereign-ai-mcp = "audit.mcp_server:main"
+
+[project.urls]
+Homepage = "https://digbijoylabs.com"
+Repository = "https://github.com/digbijoy-labs/the-sovereign-illusion"
+Book = "https://www.amazon.com/dp/B0HMS4JJ1R"

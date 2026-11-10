@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Global AI Supply-Chain Chokepoint & Sovereignty Simulator | Digbijoy Labs</title>
+  <meta name="description" content="Interactive 12-layer semiconductor, energy, and cloud jurisdiction chokepoint simulator based on The Sovereign Illusion by Victor Brooks (Digbijoy Labs)." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Global AI Supply-Chain Chokepoint & Sovereignty Simulator",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Victor Brooks" },
+    "publisher": { "@type": "Organization", "name": "Digbijoy Labs" },
+    "isBasedOn": {
+      "@type": "Book",
+      "name": "The Sovereign Illusion: AI, Geopolitics, and Power in an Interdependent World",
+      "isbn": "B0HMS4JJ1R",
+      "url": "https://www.amazon.com/dp/B0HMS4JJ1R"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #4a5568;
+      --panel: #f8f9fa;
+      --border: #2d3748;
+      --accent: #1a1a1a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      padding: 0;
+      line-height: 1.55;
+    }
+    header {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 2rem 1.5rem;
+      border-bottom: 4px solid #000000;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; letter-spacing: -0.02em; }
+    .subtitle { color: #e2e8f0; font-size: 1rem; margin: 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    label { display: block; font-weight: 600; margin: 0.75rem 0 0.25rem; font-size: 0.92rem; }
+    select, input[type="range"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      background: #fff;
+      font-size: 0.95rem;
+    }
+    .scenario-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.75rem 0;
+    }
+    button.scenario-btn {
+      background: #ffffff;
+      color: var(--fg);
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      padding: 0.45rem 0.75rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    button.scenario-btn:hover, button.scenario-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .score-box {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .score-num { font-size: 2.6rem; font-weight: 800; line-height: 1.1; }
+    .score-tier { font-weight: 700; font-size: 1rem; margin-top: 0.25rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.6rem;
+      text-align: left;
+    }
+    th { background: var(--accent); color: #ffffff; text-transform: uppercase; font-size: 0.8rem; }
+    tr:nth-child(even) { background: var(--panel); }
+    .cta-banner {
+      margin-top: 2rem;
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>THE SOVEREIGN ILLUSION — AI SUPPLY-CHAIN & KILL-SWITCH SIMULATOR</h1>
+      <p class="subtitle">Interactive 4-Invariant Sovereignty Stress-Tester &bull; Companion to <em>The Sovereign Illusion</em> by Victor Brooks (Digbijoy Labs)</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <p><strong>Direct Answer (AEO Summary):</strong> No nation-state or enterprise possesses full-stack AI autonomy in 2026. The global AI compute stack is governed by <strong>12 physical and jurisdictional chokepoints</strong> where single-vendor or single-region concentration exceeds 70%&ndash;100% (including 100% High-NA EUV lithography at ASML, &gt;90% CoWoS packaging at TSMC, and ~90% ultra-high-purity crucible quartz from Spruce Pine, NC). Use the simulator below to stress-test your organization's AI sovereignty exposure.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>1. Configure Your Stack & Geopolitical Shock</h2>
+        <label>Geopolitical Disruption Scenario Preset:</label>
+        <div class="scenario-bar">
+          <button class="scenario-btn active" onclick="applyPreset('baseline', this)">Baseline Operation</button>
+          <button class="scenario-btn" onclick="applyPreset('taiwan', this)">Taiwan Strait Blockade</button>
+          <button class="scenario-btn" onclick="applyPreset('bis', this)">US BIS Tier-2 Quota Cut</button>
+          <button class="scenario-btn" onclick="applyPreset('quartz', this)">Spruce Pine Quartz Halt</button>
+        </div>
+
+        <label for="cloudSelect">Cloud & Hyperscaler Jurisdiction (Invariant IV):</label>
+        <select id="cloudSelect" onchange="recalc()">
+          <option value="us_hyperscaler">US Hyperscaler API / Cloud (AWS, Azure, GCP) — Extraterritorial CLOUD Act Exposure</option>
+          <option value="hybrid_regional">Hybrid Regional Cloud + Leased Bare-Metal</option>
+          <option value="on_prem_airgapped">Domestic Air-Gapped On-Premises Cluster</option>
+        </select>
+
+        <label for="siliconSelect">Accelerator & Foundry Dependency (Invariant II):</label>
+        <select id="siliconSelect" onchange="recalc()">
+          <option value="nvidia_tsmc">Single-Vendor Frontier (NVIDIA Blackwell/Rubin + TSMC CoWoS + Remote Telemetry)</option>
+          <option value="multi_vendor">Multi-Substrate (NVIDIA CUDA + AMD ROCm / Huawei Ascend / Apple MLX)</option>
+        </select>
+
+        <label for="modelSelect">Foundation Model Weights & Licensing (Invariant III):</label>
+        <select id="modelSelect" onchange="recalc()">
+          <option value="closed_api">Closed Frontier API Only (GPT-6, Claude 5, Gemini 3.8)</option>
+          <option value="open_weight">Self-Hosted Open-Weight Frontier (DeepSeek-V4, Qwen 3.8 Max, GLM-5.3, Mistral)</option>
+        </select>
+
+        <label for="gridSelect">Domestic Baseload Power & Transformer Autonomy (Invariant I):</label>
+        <select id="gridSelect" onchange="recalc()">
+          <option value="grid_constrained">Grid-Constrained / Imported HVDC Transformers (36-48 mo lead time)</option>
+          <option value="ppa_baseload">Dedicated Domestic Nuclear / Hydro / Geothermal Baseload PPA</option>
+        </select>
+      </div>
+
+      <div class="card">
+        <h2>2. Live Sovereignty Exposure Audit</h2>
+        <div class="score-box">
+          <div class="score-num" id="scoreValue">18 / 100</div>
+          <div class="score-tier" id="scoreTier">CRITICAL DEPENDENCY (THE SOVEREIGN ILLUSION)</div>
+        </div>
+        <div id="findingsList" style="font-size: 0.92rem;"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 1.5rem;">
+      <h2>3. The 2026 12-Layer Global Compute Chokepoint Matrix</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Layer</th>
+            <th>Supply-Chain Stage</th>
+            <th>Primary Chokepoint</th>
+            <th>Jurisdiction</th>
+            <th>Concentration</th>
+            <th>Lead Time</th>
+            <th>Kill-Switch Vector</th>
+          </tr>
+        </thead>
+        <tbody id="matrixBody"></tbody>
+      </table>
+    </div>
+
+    <div class="cta-banner">
+      <div style="max-width: 680px;">
+        <h3 style="margin: 0 0 0.4rem 0;">Read the Complete Strategic Monograph</h3>
+        <p style="margin: 0; font-size: 0.95rem;">
+          <strong><em>The Sovereign Illusion: AI, Geopolitics, and Power in an Interdependent World</em></strong> by <strong>Victor Brooks</strong> (Digbijoy Labs, 2026). Full empirical analysis of the Four Sovereignty Invariants, the Middle-Power Playbook, and boardroom supply-chain resilience.
+        </p>
+      </div>
+      <div>
+        <a class="btn-primary" href="https://www.amazon.com/dp/B0HMS4JJ1R" target="_blank">Kindle eBook ($2.99)</a>
+        <a class="btn-primary" href="https://www.amazon.com/dp/B0HMX59GSQ" target="_blank">Paperback ($14.99)</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const DATA = [{"tier_id": "T1_MINERAL_QUARTZ", "stack_layer": "1. Mineral & Substrate Geology", "component": "High-Purity Crucible Quartz (IOTA Standard, <8 ppm impurities)", "primary_geography": "Spruce Pine, North Carolina, USA", "dominant_entities": "Sibelco, The Quartz Corp", "global_concentration_pct": "75-85%", "interruption_authority": "High (Geographic / Single-District Extraction)", "autonomous_runway_months": "3-6 months (foundry crucible buffer)", "switching_friction": "Extreme (Multi-year qualification for synthetic or alternative quartz)", "book_chapter": "Chapter 1: The Mineral Anchor"}, {"tier_id": "T2_BASELOAD_ENERGY", "stack_layer": "2. Energy & Grid Physics", "component": "Firm Multi-Gigawatt Baseload Power & High-Voltage Transformers", "primary_geography": "Regional Interconnects (US PJM/ERCOT, EU, China East-West Compute)", "dominant_entities": "Regional Utilities, Nuclear Operators, Grain-Oriented Electrical Steel Producers", "global_concentration_pct": "24-48 month transformer lead-time bottleneck", "interruption_authority": "Domestic Sovereign / Municipal Grid Operator", "autonomous_runway_months": "72 hours (on-site backup diesel/gas islanding)", "switching_friction": "5-10 years (new transmission & nuclear/firm generation siting)", "book_chapter": "Chapter 2: The Energy Contract"}, {"tier_id": "T3_EDA_ARCHITECTURE", "stack_layer": "3. Chip Design & EDA Software", "component": "Electronic Design Automation (EDA) & Core Instruction Sets", "primary_geography": "United States & United Kingdom", "dominant_entities": "Synopsys, Cadence Design Systems, Siemens EDA, Arm", "global_concentration_pct": "85%+ (EDA oligopoly)", "interruption_authority": "US Export Administration Regulations (EAR / FDPR license revocation)", "autonomous_runway_months": "6-12 months (cached license expiry & PDK freezes)", "switching_friction": "Extreme (Decades of foundry PDK co-validation)", "book_chapter": "Chapter 3: The Geography of a Chip"}, {"tier_id": "T4_EUV_LITHOGRAPHY", "stack_layer": "4. Extreme Photolithography & Optics", "component": "13.5nm Extreme Ultraviolet (EUV) Scanners, CO2 Lasers & Bragg Mirrors", "primary_geography": "Netherlands (Veldhoven) & Germany (Oberkochen / Ditzingen)", "dominant_entities": "ASML, Carl Zeiss SMT, Trumpf", "global_concentration_pct": "100% (EUV monopoly)", "interruption_authority": "Multilateral Dutch / US / German Export Licensing & Remote Telemetry Servicing", "autonomous_runway_months": "Weeks to months without OEM cryogenic/laser maintenance parts", "switching_friction": "Non-substitutable for sub-5nm single-exposure logic; DUV SAQP incurs severe yield penalty", "book_chapter": "Chapter 3: The Geography of a Chip"}, {"tier_id": "T5_PHOTORESIST_CHEMICALS", "stack_layer": "5. Ultra-Pure Semiconductor Chemicals", "component": "EUV Fluorinated Photoresists, Hydrogen Fluoride & Polyimides", "primary_geography": "Japan", "dominant_entities": "JSR, Tokyo Ohka Kogyo (TOK), Shin-Etsu, Fujifilm", "global_concentration_pct": "85-90%", "interruption_authority": "METI (Japan Ministry of Economy, Trade and Industry) Export Controls", "autonomous_runway_months": "1-3 months (short chemical shelf life)", "switching_friction": "12-24 months line re-qualification per resist chemistry", "book_chapter": "Chapter 3: The Geography of a Chip"}, {"tier_id": "T6_FRONTEND_FOUNDRY", "stack_layer": "6. Leading-Edge Wafer Fabrication", "component": "Sub-5nm Logic Foundry Cleanrooms", "primary_geography": "Taiwan (Hsinchu / Tainan / Kaohsiung), South Korea, USA", "dominant_entities": "TSMC, Samsung Foundry, Intel Foundry", "global_concentration_pct": "90%+ (TSMC share of advanced AI accelerators)", "interruption_authority": "Physical Geopolitics (Taiwan Strait) & Extraterritorial FDPR Compliance", "autonomous_runway_months": "3-4 months wafer cycle time", "switching_friction": "18-24 months physical cell-library respin + $100M+ NRE", "book_chapter": "Chapter 3: The Geography of a Chip"}, {"tier_id": "T7_HBM_COWOS_PACKAGING", "stack_layer": "7. High-Bandwidth Memory & 2.5D Packaging", "component": "HBM3e/HBM4 Vertical DRAM Stacks & CoWoS Silicon Interposers", "primary_geography": "South Korea (HBM) & Taiwan (CoWoS Packaging)", "dominant_entities": "SK Hynix, Samsung, Micron (HBM); TSMC, ASE (CoWoS)", "global_concentration_pct": "90%+ combined", "interruption_authority": "Capacity Allocation & Export Thresholds on Memory Bandwidth Density", "autonomous_runway_months": "4-8 weeks packaging turnaround", "switching_friction": "High (CoWoS interposer masks custom-bound to HBM die geometry)", "book_chapter": "Chapter 3: The Geography of a Chip"}, {"tier_id": "T8_HYPERSCALE_CLOUD", "stack_layer": "8. Hyperscale Cloud & Sovereign Enclaves", "component": "Frontier Cluster Orchestration, IAM Control Planes & Subsea Cables", "primary_geography": "United States, China, EU, Gulf States, Singapore", "dominant_entities": "AWS, Microsoft Azure, Google Cloud, Alibaba Cloud, Huawei Cloud", "global_concentration_pct": "65%+ global enterprise cloud share (US top 3)", "interruption_authority": "Extraterritorial Legal Orders (US CLOUD Act / FISA 702) & Root Key Revocation", "autonomous_runway_months": "0 hours if reliant on remote cloud control-plane authentication", "switching_friction": "Medium-High (Proprietary managed services vs open Kubernetes/vLLM)", "book_chapter": "Chapter 7 & Chapter 9"}, {"tier_id": "T9_OPEN_WEIGHT_MODELS", "stack_layer": "9. Foundation Model Weights & Inference Runtimes", "component": "Open-Weight Frontier Models (DeepSeek, Qwen, Llama, Mistral, GLM)", "primary_geography": "Multipolar (US, China, France/EU)", "dominant_entities": "Meta, DeepSeek, Alibaba Qwen, Mistral AI, Zhipu AI", "global_concentration_pct": "Distributed global commons once weights are downloaded", "interruption_authority": "Low post-download (local weights cannot be remotely revoked)", "autonomous_runway_months": "12-36 months operational runway on existing domestic silicon", "switching_friction": "Low when standardized on OpenAI-compatible / MCP interfaces", "book_chapter": "Chapter 8 & Chapter 13"}, {"tier_id": "T10_DIGITAL_PUBLIC_RAILS", "stack_layer": "10. Digital Public Infrastructure (DPI) & Procurement Rails", "component": "Open Interoperable Identity, Payment & Compute Clearing Protocols", "primary_geography": "India (UPI/MOSIP), Brazil (Pix), Estonia/Luxembourg (Data Embassy), ASEAN", "dominant_entities": "NPCI, Sovereign Ministries, Open Protocol Consortia", "global_concentration_pct": "50+ adopting nations", "interruption_authority": "Sovereign Domestic Protocol Governance", "autonomous_runway_months": "Indefinite when backed by multi-vendor domestic & bilateral hosting", "switching_friction": "Low (zero single-vendor lock-in by protocol design)", "book_chapter": "Chapter 12 & Chapter 14"}];
+    let activeShock = "baseline";
+
+    function renderTable() {
+      const tbody = document.getElementById("matrixBody");
+      tbody.innerHTML = DATA.map(row => `
+        <tr>
+          <td><strong>${row.stack_layer}</strong></td>
+          <td>${row.component}</td>
+          <td>${row.dominant_entities}</td>
+          <td>${row.primary_geography}</td>
+          <td><strong>${row.global_concentration_pct}</strong></td>
+          <td>${row.autonomous_runway_months}</td>
+          <td>${row.switching_friction}</td>
+        </tr>
+      `).join("");
+    }
+
+    function applyPreset(preset, btn) {
+      activeShock = preset;
+      document.querySelectorAll(".scenario-btn").forEach(b => b.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+      recalc();
+    }
+
+    function recalc() {
+      let score = 100;
+      const notes = [];
+      const cloud = document.getElementById("cloudSelect").value;
+      const silicon = document.getElementById("siliconSelect").value;
+      const model = document.getElementById("modelSelect").value;
+      const grid = document.getElementById("gridSelect").value;
+
+      if (cloud === "us_hyperscaler") {
+        score -= 28;
+        notes.push("<li><strong>Jurisdictional Kill-Switch (-28 pts):</strong> Foreign hyperscaler IAM &amp; API billing can revoke inference access in &lt;60 seconds under extraterritorial sanctions.</li>");
+      } else if (cloud === "hybrid_regional") {
+        score -= 12;
+        notes.push("<li><strong>Hybrid Cloud Exposure (-12 pts):</strong> Regional hosting mitigates instant API cutoffs but retains upstream hypervisor/firmware dependencies.</li>");
+      }
+
+      if (silicon === "nvidia_tsmc") {
+        score -= 25;
+        notes.push("<li><strong>Foundry &amp; Packaging Monoculture (-25 pts):</strong> 92% CoWoS packaging &amp; 100% EUV reliance creates a 36-to-60 month hardware replacement cliff.</li>");
+      } else {
+        score -= 8;
+        notes.push("<li><strong>Heterogeneous Silicon Resilience (-8 pts):</strong> Multi-substrate routing (CUDA + ROCm/Ascend/MLX) prevents single-vendor hardware lock-in.</li>");
+      }
+
+      if (model === "closed_api") {
+        score -= 22;
+        notes.push("<li><strong>Closed-Weight Cognitive Rent (-22 pts):</strong> Zero domestic weight custody; subject to silent model deprecation and token price shocks.</li>");
+      } else {
+        notes.push("<li><strong>Open-Weight Custody (+0 penalty):</strong> Local weight custody guarantees continued inference even under complete subsea cable or API isolation.</li>");
+      }
+
+      if (grid === "grid_constrained") {
+        score -= 15;
+        notes.push("<li><strong>Baseload &amp; HVDC Transformer Bottleneck (-15 pts):</strong> Grain-oriented electrical steel &amp; HVDC transformer queues cap cluster scaling for 36+ months.</li>");
+      }
+
+      if (activeShock === "taiwan") {
+        score -= 20;
+        notes.push("<li><strong>[SHOCK: Taiwan Strait Blockade] (-20 pts):</strong> Immediate halt to TSMC N2/N3 wafer fabrication &amp; CoWoS packaging; hardware attrition begins within 90 days.</li>");
+      } else if (activeShock === "bis") {
+        score -= 15;
+        notes.push("<li><strong>[SHOCK: BIS Tier-2 Compute Cap] (-15 pts):</strong> Sovereign cluster expansion frozen by extraterritorial export licensing caps.</li>");
+      } else if (activeShock === "quartz") {
+        score -= 12;
+        notes.push("<li><strong>[SHOCK: Spruce Pine Quartz Halt] (-12 pts):</strong> Global monocrystalline silicon ingot crucible supply disrupted within 6 months.</li>");
+      }
+
+      score = Math.max(0, Math.min(100, score));
+      document.getElementById("scoreValue").textContent = score + " / 100";
+      const tierEl = document.getElementById("scoreTier");
+      if (score >= 75) {
+        tierEl.textContent = "STRATEGICALLY RESILIENT (MULTIPOLAR AUTONOMY)";
+      } else if (score >= 45) {
+        tierEl.textContent = "MODERATE EXPOSURE (HEDGED MIDDLE-POWER POSTURE)";
+      } else {
+        tierEl.textContent = "CRITICAL DEPENDENCY (THE SOVEREIGN ILLUSION)";
+      }
+      document.getElementById("findingsList").innerHTML = "<ul>" + notes.join("") + "</ul>";
+    }
+
+    renderTable();
+    recalc();
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "title": "2026 Global AI Supply-Chain Chokepoints Dataset & Four Sovereignty Invariants Auditor",
+  "upload_type": "dataset",
+  "description": "Structured 12-layer dataset of global AI compute supply-chain chokepoints (Spruce Pine quartz, ASML High-NA EUV lithography, TSMC CoWoS packaging, HBM4 memory, HVDC grid transformers, extraterritorial cloud jurisdiction) and Python/MCP sovereignty exposure auditor. Companion to 'The Sovereign Illusion: AI, Geopolitics, and Power in an Interdependent World' by Victor Brooks (Digbijoy Labs).",
+  "creators": [
+    {
+      "name": "Brooks, Victor",
+      "affiliation": "Digbijoy Labs Publications"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "Sovereign AI",
+    "Semiconductor Supply Chain",
+    "Geopolitics of AI",
+    "ASML EUV",
+    "TSMC CoWoS",
+    "AI Governance",
+    "Compute Chokepoints"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.amazon.com/dp/B0HMS4JJ1R",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

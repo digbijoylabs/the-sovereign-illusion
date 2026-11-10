@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you reference this dataset or framework, please cite The Sovereign Illusion."
+authors:
+  - family-names: "Brooks"
+    given-names: "Victor"
+title: "The Sovereign Illusion: AI, Geopolitics, and Power in an Interdependent World"
+date-released: 2026-10-15
+url: "https://github.com/digbijoy-labs/the-sovereign-illusion"
+publisher:
+  name: "Digbijoy Labs"

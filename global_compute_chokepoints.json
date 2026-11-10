@@ -1,0 +1,122 @@
+[
+  {
+    "tier_id": "T1_MINERAL_QUARTZ",
+    "stack_layer": "1. Mineral & Substrate Geology",
+    "component": "High-Purity Crucible Quartz (IOTA Standard, <8 ppm impurities)",
+    "primary_geography": "Spruce Pine, North Carolina, USA",
+    "dominant_entities": "Sibelco, The Quartz Corp",
+    "global_concentration_pct": "75-85%",
+    "interruption_authority": "High (Geographic / Single-District Extraction)",
+    "autonomous_runway_months": "3-6 months (foundry crucible buffer)",
+    "switching_friction": "Extreme (Multi-year qualification for synthetic or alternative quartz)",
+    "book_chapter": "Chapter 1: The Mineral Anchor"
+  },
+  {
+    "tier_id": "T2_BASELOAD_ENERGY",
+    "stack_layer": "2. Energy & Grid Physics",
+    "component": "Firm Multi-Gigawatt Baseload Power & High-Voltage Transformers",
+    "primary_geography": "Regional Interconnects (US PJM/ERCOT, EU, China East-West Compute)",
+    "dominant_entities": "Regional Utilities, Nuclear Operators, Grain-Oriented Electrical Steel Producers",
+    "global_concentration_pct": "24-48 month transformer lead-time bottleneck",
+    "interruption_authority": "Domestic Sovereign / Municipal Grid Operator",
+    "autonomous_runway_months": "72 hours (on-site backup diesel/gas islanding)",
+    "switching_friction": "5-10 years (new transmission & nuclear/firm generation siting)",
+    "book_chapter": "Chapter 2: The Energy Contract"
+  },
+  {
+    "tier_id": "T3_EDA_ARCHITECTURE",
+    "stack_layer": "3. Chip Design & EDA Software",
+    "component": "Electronic Design Automation (EDA) & Core Instruction Sets",
+    "primary_geography": "United States & United Kingdom",
+    "dominant_entities": "Synopsys, Cadence Design Systems, Siemens EDA, Arm",
+    "global_concentration_pct": "85%+ (EDA oligopoly)",
+    "interruption_authority": "US Export Administration Regulations (EAR / FDPR license revocation)",
+    "autonomous_runway_months": "6-12 months (cached license expiry & PDK freezes)",
+    "switching_friction": "Extreme (Decades of foundry PDK co-validation)",
+    "book_chapter": "Chapter 3: The Geography of a Chip"
+  },
+  {
+    "tier_id": "T4_EUV_LITHOGRAPHY",
+    "stack_layer": "4. Extreme Photolithography & Optics",
+    "component": "13.5nm Extreme Ultraviolet (EUV) Scanners, CO2 Lasers & Bragg Mirrors",
+    "primary_geography": "Netherlands (Veldhoven) & Germany (Oberkochen / Ditzingen)",
+    "dominant_entities": "ASML, Carl Zeiss SMT, Trumpf",
+    "global_concentration_pct": "100% (EUV monopoly)",
+    "interruption_authority": "Multilateral Dutch / US / German Export Licensing & Remote Telemetry Servicing",
+    "autonomous_runway_months": "Weeks to months without OEM cryogenic/laser maintenance parts",
+    "switching_friction": "Non-substitutable for sub-5nm single-exposure logic; DUV SAQP incurs severe yield penalty",
+    "book_chapter": "Chapter 3: The Geography of a Chip"
+  },
+  {
+    "tier_id": "T5_PHOTORESIST_CHEMICALS",
+    "stack_layer": "5. Ultra-Pure Semiconductor Chemicals",
+    "component": "EUV Fluorinated Photoresists, Hydrogen Fluoride & Polyimides",
+    "primary_geography": "Japan",
+    "dominant_entities": "JSR, Tokyo Ohka Kogyo (TOK), Shin-Etsu, Fujifilm",
+    "global_concentration_pct": "85-90%",
+    "interruption_authority": "METI (Japan Ministry of Economy, Trade and Industry) Export Controls",
+    "autonomous_runway_months": "1-3 months (short chemical shelf life)",
+    "switching_friction": "12-24 months line re-qualification per resist chemistry",
+    "book_chapter": "Chapter 3: The Geography of a Chip"
+  },
+  {
+    "tier_id": "T6_FRONTEND_FOUNDRY",
+    "stack_layer": "6. Leading-Edge Wafer Fabrication",
+    "component": "Sub-5nm Logic Foundry Cleanrooms",
+    "primary_geography": "Taiwan (Hsinchu / Tainan / Kaohsiung), South Korea, USA",
+    "dominant_entities": "TSMC, Samsung Foundry, Intel Foundry",
+    "global_concentration_pct": "90%+ (TSMC share of advanced AI accelerators)",
+    "interruption_authority": "Physical Geopolitics (Taiwan Strait) & Extraterritorial FDPR Compliance",
+    "autonomous_runway_months": "3-4 months wafer cycle time",
+    "switching_friction": "18-24 months physical cell-library respin + $100M+ NRE",
+    "book_chapter": "Chapter 3: The Geography of a Chip"
+  },
+  {
+    "tier_id": "T7_HBM_COWOS_PACKAGING",
+    "stack_layer": "7. High-Bandwidth Memory & 2.5D Packaging",
+    "component": "HBM3e/HBM4 Vertical DRAM Stacks & CoWoS Silicon Interposers",
+    "primary_geography": "South Korea (HBM) & Taiwan (CoWoS Packaging)",
+    "dominant_entities": "SK Hynix, Samsung, Micron (HBM); TSMC, ASE (CoWoS)",
+    "global_concentration_pct": "90%+ combined",
+    "interruption_authority": "Capacity Allocation & Export Thresholds on Memory Bandwidth Density",
+    "autonomous_runway_months": "4-8 weeks packaging turnaround",
+    "switching_friction": "High (CoWoS interposer masks custom-bound to HBM die geometry)",
+    "book_chapter": "Chapter 3: The Geography of a Chip"
+  },
+  {
+    "tier_id": "T8_HYPERSCALE_CLOUD",
+    "stack_layer": "8. Hyperscale Cloud & Sovereign Enclaves",
+    "component": "Frontier Cluster Orchestration, IAM Control Planes & Subsea Cables",
+    "primary_geography": "United States, China, EU, Gulf States, Singapore",
+    "dominant_entities": "AWS, Microsoft Azure, Google Cloud, Alibaba Cloud, Huawei Cloud",
+    "global_concentration_pct": "65%+ global enterprise cloud share (US top 3)",
+    "interruption_authority": "Extraterritorial Legal Orders (US CLOUD Act / FISA 702) & Root Key Revocation",
+    "autonomous_runway_months": "0 hours if reliant on remote cloud control-plane authentication",
+    "switching_friction": "Medium-High (Proprietary managed services vs open Kubernetes/vLLM)",
+    "book_chapter": "Chapter 7 & Chapter 9"
+  },
+  {
+    "tier_id": "T9_OPEN_WEIGHT_MODELS",
+    "stack_layer": "9. Foundation Model Weights & Inference Runtimes",
+    "component": "Open-Weight Frontier Models (DeepSeek, Qwen, Llama, Mistral, GLM)",
+    "primary_geography": "Multipolar (US, China, France/EU)",
+    "dominant_entities": "Meta, DeepSeek, Alibaba Qwen, Mistral AI, Zhipu AI",
+    "global_concentration_pct": "Distributed global commons once weights are downloaded",
+    "interruption_authority": "Low post-download (local weights cannot be remotely revoked)",
+    "autonomous_runway_months": "12-36 months operational runway on existing domestic silicon",
+    "switching_friction": "Low when standardized on OpenAI-compatible / MCP interfaces",
+    "book_chapter": "Chapter 8 & Chapter 13"
+  },
+  {
+    "tier_id": "T10_DIGITAL_PUBLIC_RAILS",
+    "stack_layer": "10. Digital Public Infrastructure (DPI) & Procurement Rails",
+    "component": "Open Interoperable Identity, Payment & Compute Clearing Protocols",
+    "primary_geography": "India (UPI/MOSIP), Brazil (Pix), Estonia/Luxembourg (Data Embassy), ASEAN",
+    "dominant_entities": "NPCI, Sovereign Ministries, Open Protocol Consortia",
+    "global_concentration_pct": "50+ adopting nations",
+    "interruption_authority": "Sovereign Domestic Protocol Governance",
+    "autonomous_runway_months": "Indefinite when backed by multi-vendor domestic & bilateral hosting",
+    "switching_friction": "Low (zero single-vendor lock-in by protocol design)",
+    "book_chapter": "Chapter 12 & Chapter 14"
+  }
+]
