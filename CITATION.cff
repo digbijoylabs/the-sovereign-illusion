@@ -1,10 +1,18 @@
 cff-version: 1.2.0
-message: "If you reference this dataset or framework, please cite The Sovereign Illusion."
+message: "If you use this supply-chain chokepoints dataset, simulator, or Sovereignty MCP auditor, please cite the book and monograph."
+title: "The Sovereign Illusion: AI, Geopolitics, and Power in an Interdependent World"
+type: software
 authors:
   - family-names: "Brooks"
     given-names: "Victor"
-title: "The Sovereign Illusion: AI, Geopolitics, and Power in an Interdependent World"
-date-released: 2026-10-15
-url: "https://github.com/digbijoy-labs/the-sovereign-illusion"
-publisher:
-  name: "Digbijoy Labs"
+    affiliation: "Digbijoy Labs Publications"
+doi: "10.5281/zenodo.24100427"
+url: "https://digbijoylabs.com/books/the-sovereign-illusion/"
+repository-code: "https://github.com/digbijoylabs/the-sovereign-illusion"
+date-released: "2026-11-15"
+license: "MIT"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24100427"
+  - type: url
+    value: "https://www.wikidata.org/wiki/Q142203213"
